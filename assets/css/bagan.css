@@ -16,6 +16,8 @@ body{
 
 	margin: 0;
 	padding: 0;
+
+	text-align: justify;
 }
 
 .banner {
@@ -78,10 +80,10 @@ body{
 	padding-right: 30px;
 }
 .oobimg{
-	width: 350px;
+	width: 100%;
 	height: auto;
 	border-radius: 16px;
-	transform: translateX(-15px);
+	/*transform: translateX(-15px);*/
 }
 .banner1{
 	width: 100%;
@@ -94,7 +96,7 @@ body{
 
 }
 .btimg{
-	width: 350px;
+	width: 100%;
 	height: auto;
 	border-radius: 16px;
 	transform: translateX(15px);
@@ -152,9 +154,9 @@ body{
 
 }
 .balloonimg{
-	width: 350px;
+	width: 100%;
 	border-radius: 16px;
-	transform: translateX(-15px);
+	/*transform: translateX(-15px);*/
 }
 .transporttext{
 	text-align: center;
@@ -188,6 +190,7 @@ button{
 	padding: 15px;
 	padding-left: 30px;
 }
+
 .banner4{
 	width: 100%;
 	border-radius: 16px;
@@ -198,10 +201,10 @@ button{
 }
 
 .toimg{
-	width: 350px;
+	width: 100%;
 	height: auto;
 	border-radius: 16px;
-	transform: translateX(15px);
+	/*transform: translateX(15px);*/
 	border: 2px solid black;
 }
 .map{
@@ -226,12 +229,12 @@ button{
 	z-index: 1;
 }*/
 
-section{
+/*section{
 	width: 100%;
 	height: auto;
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+}*/
 
 /*.gotopbtn{
 	position: fixed;
@@ -254,24 +257,26 @@ section{
 
 
 #button{
-	display: inline-block;
-	line-height: 50px;
-	text-align: center;
+	/*display: inline-block;*/
+	/*line-height: 50px;
+	text-align: center;*/
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
-	transition: background-color .3s;
-	opacity: 0.5s,visibility .5s;
+	transition: transform .3s ease-in-out;
+	/*opacity: 0.5s,visibility .5s;
 	opacity: 1;
+	border-radius: 100%;*/
 	z-index: 1000;
-	border-radius: 100%;
+	opacity: 0;
 }
 #button:hover{
 	cursor: pointer;
-	background: white;
+	/*background: white;*/
 
-	border-radius: 100%;
-	width: 50px;
+	/*border-radius: 100%;
+	width: 50px;*/
+	transform: scale(1.1);
 }
 #button.show{
 	opacity: 1;
@@ -290,17 +295,10 @@ section{
 	padding: 30px;
 }
 
-
-
-
-
-
-
-
 #img1,#img2,#img3,#img4,#img5,#img6,#img7,#img8,#img9,#img10,#img11,#img12,#img13,#img14,#img15,#img16,#img17,#img18,#img19,#img20
 {
-	width: 210px;
-	height: 126px;
+	width: 100%;
+	height: 100%;
 
 	text-align: center;
 	border: solid #b674f7;
@@ -310,24 +308,29 @@ section{
 	opacity: 1;
 }
 
-#img1:hover{
-	width: 240px;
-	height: 150px;
+#img1:hover, #img2:hover, #img3:hover, #img4:hover, #img5:hover, #img6:hover, #img7:hover, #img8:hover, #img9:hover, #img10:hover,
+#img11:hover, #img12:hover, #img13:hover, #img14:hover, #img15:hover, #img16:hover, #img17:hover, #img18:hover, #img19:hover, #img20:hover{
+	width: 105%;
+	height: 105%;
 
 	text-align: center;
 	border: solid #96f2b9;
 	
+	position: relative;
+	top: -2%;
+	left: -2%;
 	border-radius: 10px;
 	cursor: pointer;
 	opacity: 1;
-	transition: 1s;
+	transition: 1s ease;
 }
 
-#img1:active{
+#img1:active, #img2:active, #img3:active, #img4:active, #img5:active, #img6:active, #img7:active, #img8:active, #img9:active, #img10:active,
+#img11:active, #img12:active, #img13:active, #img14:active, #img15:active, #img16:active, #img17:active, #img18:active, #img19:active, #img20:active{
 	border: #8666cc;
 }
 
-#img2:hover{
+/*#img2:hover{
 	width: 240px;
 	height: 150px;
 
@@ -631,7 +634,7 @@ section{
 
 #img20:active{
 	border: #8666cc;
-}
+}*/
 /*.table1,tr,td{
 	border: 2px solid black;
 }*/
@@ -664,4 +667,14 @@ section{
 }
 #htmllabs:active{
 	color: violet;
+}
+
+@media(max-width: 767px){
+	.banner1, .banner2, .banner3{
+		height: 200px;
+	}
+
+	.banner4{
+		height: 120px;
+	}
 }
