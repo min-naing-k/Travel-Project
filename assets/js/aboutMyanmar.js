@@ -22,57 +22,24 @@ overlay.addEventListener('click', () => {
   toggleMenu.classList.remove('cross');
 });
 
-var swiper = new Swiper('.mySwiper', {
+var swiper3 = new Swiper('.mySwiper3', {
   slidesPerView: 1,
-  spaceBetween: 0,
-  loop: true,
-  allowTouchMove: false,
-  speed: 1000,
-  autoplay: {
-    delay: 5000,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-swiperContainer.addEventListener('mouseenter', () => {
-  swiper.autoplay.stop();
-});
-
-swiperContainer.addEventListener('mouseleave', () => {
-  swiper.autoplay.start();
-});
-
-headerContainer.addEventListener('mouseenter', () => {
-  swiper.autoplay.stop();
-});
-
-headerContainer.addEventListener('mouseleave', () => {
-  swiper.autoplay.start();
-});
-
-var swiper2 = new Swiper('.mySwiper2', {
-  slidesPerView: 1,
-  spaceBetween: 25,
+  spaceBetween: 27,
   allowTouchMove: true,
   speed: 500,
   navigation: {
-    disabledClass: 'swiper-button-enabled',
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
   breakpoints: {
-    768: {
+    577: {
       slidesPerView: 2,
     },
-    1000: {
+    768: {
       slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 4,
     },
   },
 });
