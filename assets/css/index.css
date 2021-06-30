@@ -304,7 +304,7 @@ a {
   position: relative;
   display: flex;
   justify-content: center;
-  height: 100%;
+  min-height: calc(100vh - 4rem);
 }
 
 .header .container .swiper-button-prev {
@@ -416,9 +416,10 @@ a {
   font-weight: var(--font-sbold);
 }
 
-.header .container .get-start {
+.header .get-start {
   position: absolute;
   z-index: 2;
+  left: 50%;
   bottom: 20px;
   width: 25px;
   height: 40px;
@@ -430,13 +431,13 @@ a {
   cursor: pointer;
   animation: bounce 1.5s linear infinite;
 }
-.header .container .get-start .dot {
+.header .get-start .dot {
   width: 2px;
   height: 10px;
   background-color: var(--white-color);
 }
 
-.header .container .get-start:hover {
+.header .get-start:hover {
   animation: none;
 }
 
@@ -782,6 +783,7 @@ a {
 
 .about-myanmar__header .main-title {
   font-size: 3.3rem;
+  text-align: center;
   color: var(--white-color);
   font-family: var(--body-font);
   line-height: 1;
@@ -990,7 +992,7 @@ a {
 
 /* Utilities */
 .section {
-  padding: 4rem 0;
+  padding: 6rem 0;
 }
 
 .sub-title {
@@ -1050,6 +1052,9 @@ a {
 
 /* Media */
 @media (max-width: 1000px) {
+  .header {
+    min-height: 900px;
+  }
   .nav__menu {
     position: fixed;
     top: 0;
@@ -1184,6 +1189,9 @@ a {
 
 /* 747 Media */
 @media (max-width: 747px) {
+  .header {
+    min-height: 900px;
+  }
   .greeting .quote {
     font-size: 1.5rem;
   }
@@ -1194,6 +1202,9 @@ a {
 
 /* 991 Media */
 @media (max-width: 991px) {
+  .header {
+    min-height: 900px;
+  }
   /* Destination */
   .section-title {
     text-align: center;
@@ -1214,6 +1225,12 @@ a {
 
 /* 767 Media */
 @media (max-width: 767px) {
+  .header {
+    min-height: 600px;
+  }
+  .about-myanmar__header .main-title {
+    font-size: 2rem;
+  }
   /* Destination */
   .section-title::after {
     left: 50%;
