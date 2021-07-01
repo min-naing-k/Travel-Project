@@ -22,6 +22,18 @@ overlay.addEventListener('click', () => {
   toggleMenu.classList.remove('cross');
 });
 
+window.addEventListener('scroll', () => {
+  scrollToTop.classList.toggle('active', window.scrollY > 600);
+});
+
+scrollToTop.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth',
+  });
+});
+
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 1,
   spaceBetween: 0,
@@ -75,18 +87,6 @@ var swiper2 = new Swiper('.mySwiper2', {
       slidesPerView: 3,
     },
   },
-});
-
-window.addEventListener('scroll', () => {
-  scrollToTop.classList.toggle('active', window.scrollY > 600);
-});
-
-scrollToTop.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: 'smooth',
-  });
 });
 
 function preLoad() {
